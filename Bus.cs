@@ -2,15 +2,16 @@ namespace Vehicle
 {
     public class Bus : Vehicle
     {
-        public int nbOfSeat;
-        public Bus(string brand, string color, int year, int nbOfSeat)
-            : base(brand, color, year)
+
+        private int speed = 0; // m/s
+        public Bus(string brand, string honkSong,int speed): base(brand, honkSong)
         {
-            this.nbOfSeat = nbOfSeat;
+            this.speed = speed;
         }
-        public override string ToString()
-        {
-            return "Bus : " + base.ToString() + " " + nbOfSeat + " seats";
-        }
+
+    public int GetSpeed {
+        get { return this.speed; }
+    }
+
     }
 }
