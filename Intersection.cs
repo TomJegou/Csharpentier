@@ -13,5 +13,5 @@ namespace Intersection
         {
             return File.ReadAllText("assets/Intersection.txt");
         }
-    } 
+    }
 }
