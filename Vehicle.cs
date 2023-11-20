@@ -3,7 +3,7 @@ using System.ComponentModel;
 
 namespace Vehicle
 {
-    class Vehicle(string brand, string honkSong) : IVehicle
+    public class Vehicle(string brand, string honkSong) : IVehicle
     {
         public string Brand { get; set; } = brand;
         public string HonkSong { get; set; } = honkSong;
