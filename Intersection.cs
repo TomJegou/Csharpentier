@@ -11,10 +11,7 @@ namespace Intersection
 
         public override string? ToString()
         {
-            using FileStream fs = File.OpenRead("assets/Intersection.txt");
-            byte[] buf = new byte[1048];
-            fs.Read(buf);
-            return Convert.ToString(buf);
+            return File.ReadAllText("assets/Intersection.txt");
         }
     } 
 }
