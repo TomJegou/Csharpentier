@@ -10,7 +10,7 @@ public class NPC
 {
     Enfant,
     Adulte,
-    Vieux
+    Vieux  
 }
 
 public StadeDeVie ClasserParAge()
