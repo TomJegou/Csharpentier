@@ -2,6 +2,7 @@ namespace Intersection
 {
     public interface IIntersection
     {
-        public void ToString();
+        public int NbrRoads { get; set; }
+        public int NbrCrossWalk {get; set; }
     }
 }
