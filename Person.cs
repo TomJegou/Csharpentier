@@ -1,5 +1,3 @@
-using listStadeDeVie;
-
 namespace Person{
     public class NPC(int age, int vitesse)
     { 
