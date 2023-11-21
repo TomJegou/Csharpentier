@@ -14,7 +14,8 @@ namespace Vehicle
 
         public void Go()
         {
-            Console.WriteLine("The Vehicle is goigng in the intersection");
+            Console.WriteLine("The Vehicle is goigng to the destination road");
+            CurrentPoint = DestinationPoint;
         }
 
         public void Stop()
