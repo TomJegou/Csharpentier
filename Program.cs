@@ -1,4 +1,4 @@
-﻿using Vehicle;
+﻿using Intersection;
 
 namespace Program
 {
@@ -6,8 +6,8 @@ namespace Program
     {
         public static void Main()
         {
-            Vehicle.Vehicle myVehicle = new("Ford","TUUUT TUUUT !");
-            myVehicle.Honk();
+            Intersection.Intersection myIntersection = new(4, 4);
+            Console.WriteLine(myIntersection);
         }
     }
 }
