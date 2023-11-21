@@ -2,14 +2,13 @@
 
 namespace Program
 {
-    class Program()
+    class Program
     {
         public static void Main()
         {
             while (true)
             {
                 Intersection.Intersection intersection = new(3, 0);
-                intersection.Generate();
                 Console.WriteLine(intersection);
                 foreach (Road road in intersection.ListRoads)
                 {
