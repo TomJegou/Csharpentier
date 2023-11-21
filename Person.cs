@@ -1,12 +1,8 @@
 namespace Person{
-    public class NPC(){ 
-        public int Age;
-        public int Vitesse;
-        //Constructeur NPC
-        public NPC(int age, int vitesse ){
-            Age = age;
-            Vitesse = vitesse;
-        }
+    public class NPC(int age, int vitesse)
+    { 
+        public int Age {get; set;} = age;
+        public int Vitesse {get; set;} = vitesse;
         //Enumération avec les 3 Stades de vie possible d'un NPC
         public enum StadeDeVie{
         Enfant,
@@ -31,5 +27,3 @@ namespace Person{
         }
     }
 }
-
-
