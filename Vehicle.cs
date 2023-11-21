@@ -28,7 +28,7 @@ namespace Vehicle
 
         public override string ToString()
         {
-            return string.Format("Vehicle :\n{0}\n{1}\n{2}\nStart at {3}\nWants to go to {4}\n", TypeVehicle, Brand, Speed, StartingPoint, DestinationPoint);
+            return string.Format("Vehicle :\n{0}\n{1}\n{2}\nStart at road {3}\nWants to go to road {4}\n", TypeVehicle, Brand, Speed, StartingPoint.RoadName, DestinationPoint.RoadName);
         }
     }
 }
