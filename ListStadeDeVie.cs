@@ -6,5 +6,5 @@ namespace Person
         Enfant,
         Adulte,
         Vieux,  
-        }
+    }
 }
