@@ -1,4 +1,5 @@
-namespace Person{
+namespace Person
+{
     public class NPC(int age, int vitesse)
     { 
         public int Age {get; set;} = age;
