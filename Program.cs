@@ -8,7 +8,7 @@ namespace Program
         {
             while (true)
             {
-                Intersection.Intersection intersection = new(3, 0);
+                Intersection.Intersection intersection = new(2, 0);
                 Console.WriteLine(intersection);
                 foreach (Road road in intersection.ListRoads)
                 {
