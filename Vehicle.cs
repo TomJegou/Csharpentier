@@ -1,5 +1,3 @@
-using System;
-using System.ComponentModel;
 using Intersection;
 
 namespace Vehicle

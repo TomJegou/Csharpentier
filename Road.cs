@@ -1,5 +1,3 @@
-using Vehicle;
-
 namespace Intersection
 {
     public class Road(List<Vehicle.Vehicle> listVehicle, string roadName)
