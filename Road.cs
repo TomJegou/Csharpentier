@@ -8,9 +8,15 @@ namespace Intersection
         public override string ToString()
         {
             string result = string.Format("The road {0} contains : \n", RoadName);
-            foreach (Vehicle.Vehicle car in ListVehicle)
+            if (ListVehicle.Count == 0)
             {
-                result += car;
+                result += "Nothing\n";
+            } else
+            {
+                foreach (Vehicle.Vehicle car in ListVehicle)
+                {
+                    result += car;
+                }
             }
             return result;
         }
