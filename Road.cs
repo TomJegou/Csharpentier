@@ -1,9 +1,15 @@
 namespace Intersection
 {
-    public class Road(List<Vehicle.Vehicle> listVehicle, string roadName)
+    public class Road
     {
-        public string RoadName { get; set; } = roadName;
-        public List<Vehicle.Vehicle> ListVehicle = listVehicle;
+        public string RoadName { get; set; }
+        public List<Vehicle.Vehicle> ListVehicle;
+
+        public Road(List<Vehicle.Vehicle> listVehicle, string roadName)
+        {
+            RoadName = roadName;
+            ListVehicle = listVehicle;
+        }
 
         public override string ToString()
         {
