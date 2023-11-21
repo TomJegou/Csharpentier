@@ -10,7 +10,12 @@ namespace Intersection
 
         public override string? ToString()
         {
-            return File.ReadAllText("assets/Intersection.txt");
+            string result = File.ReadAllText("assets/Intersection.txt");
+            ListRoads.ForEach(delegate(Road road)
+            {
+                result += road;
+            });
+            return result;
         }
 
         public void Generate()
