@@ -1,10 +1,15 @@
 namespace Person
 {
-    public class NPC(int age, int vitesse)
+    public class NPC
     { 
-        public int Age {get; set;} = age;
-        public int Vitesse {get; set;} = vitesse;
+        public int Age {get; set;}
+        public int Vitesse {get; set;}
         //Méthode pour détecter quel est le stade de vie du NPC
+        public NPC(int age, int vitesse)
+        {
+            Age = age;
+            Vitesse = vitesse;
+        }
         public StadeDeVie ClasserParAge()
         {
             if (Age < 18)
