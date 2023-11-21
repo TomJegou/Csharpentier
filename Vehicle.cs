@@ -4,10 +4,10 @@ using Intersection;
 
 namespace Vehicle
 {
-    public class Vehicle(ListBrands brand, int speed,string honkSong, ListDirection startingPoint, ListDirection destinationPoint, ListVehicle typeVehicle) : IVehicle
+    public class Vehicle(ListBrands brand, int speed,string honkSong, Road startingPoint, Road destinationPoint, ListVehicle typeVehicle) : IVehicle
     {
-        public ListDirection StartingPoint { get; set; } = startingPoint;
-        public ListDirection DestinationPoint { get; set; } = destinationPoint;
+        public Road StartingPoint { get; set; } = startingPoint;
+        public Road DestinationPoint { get; set; } = destinationPoint;
         public ListBrands Brand { get; set; } = brand;
         public ListVehicle TypeVehicle {get; set; } = typeVehicle;
         public string HonkSong { get; set; } = honkSong;
