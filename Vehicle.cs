@@ -2,15 +2,26 @@ using Intersection;
 
 namespace Vehicle
 {
-    public class Vehicle(ListBrands brand, int speed,string honkSong, Road startingPoint, Road destinationPoint, ListVehicle typeVehicle) : IVehicle
+    public class Vehicle : IVehicle
     {
-        public Road StartingPoint { get; set; } = startingPoint;
-        public Road DestinationPoint { get; set; } = destinationPoint;
-        public Road CurrentPoint { get; set; } = startingPoint;
-        public ListBrands Brand { get; set; } = brand;
-        public ListVehicle TypeVehicle {get; set; } = typeVehicle;
-        public string HonkSong { get; set; } = honkSong;
-        public int Speed { get; set; } = speed;
+        public Road StartingPoint { get; set; }
+        public Road DestinationPoint { get; set; }
+        public Road CurrentPoint { get; set; }
+        public ListBrands Brand { get; set; }
+        public ListVehicle TypeVehicle {get; set; }
+        public string HonkSong { get; set; }
+        public int Speed { get; set; }
+
+        public Vehicle(ListBrands brand, int speed,string honkSong, Road startingPoint, Road destinationPoint, ListVehicle typeVehicle)
+        {
+            StartingPoint = startingPoint;
+            DestinationPoint = destinationPoint;
+            CurrentPoint = startingPoint;
+            Brand = brand;
+            TypeVehicle = typeVehicle;
+            HonkSong = honkSong;
+            Speed = speed;
+        }
 
         public void Go()
         {
