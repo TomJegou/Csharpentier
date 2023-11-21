@@ -23,7 +23,7 @@ namespace Intersection
         {
             for (int i  = 0; i <= NbrRoads; i++)
             {
-                Vehicle.Vehicle[] lV = [];
+                List<Vehicle.Vehicle> lV = [];
                 Road road = new(lV, string.Format("{0}", i));
                 ListRoads.Add(road);
             }

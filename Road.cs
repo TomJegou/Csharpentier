@@ -2,10 +2,10 @@ using Vehicle;
 
 namespace Intersection
 {
-    public class Road(Vehicle.Vehicle[] listVehicle, string roadName)
+    public class Road(List<Vehicle.Vehicle> listVehicle, string roadName)
     {
         public string RoadName { get; set; } = roadName;
-        public Vehicle.Vehicle[] ListVehicle = listVehicle;
+        public List<Vehicle.Vehicle> ListVehicle = listVehicle;
 
         public override string ToString()
         {
