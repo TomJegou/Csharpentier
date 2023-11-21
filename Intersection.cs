@@ -19,16 +19,29 @@ namespace Intersection
 
         public void Generate()
         {
+            GenerateRoad();
+            GenerateVehiles();
+        }
+
+        public void GenerateVehiles()
+        {
             for (int i  = 0; i < NbrRoads; i++)
             {
-                List<Vehicle.Vehicle> lV = [];
                 int nbrV = new Random().Next(0, 3);
                 for (int j = 0; j < nbrV; j++)
                 {
                     int sP = new Random().Next(0, ListRoads.Count);
                     int dP = new Random().Next(0, ListRoads.Count);
-                    lV.Add(new Vehicle.Vehicle(ListBrands.BMW, 300, "TUUT TUUT !", ListRoads[sP], ListRoads[dP], ListVehicle.Car));
+                    ListRoads[i].ListVehicle.Add(new Vehicle.Vehicle(ListBrands.BMW, 300, "TUUT TUUT !", ListRoads[sP], ListRoads[dP], ListVehicle.Car));
                 }
+            }
+        }
+
+        public void GenerateRoad()
+        {
+            for (int i  = 0; i < NbrRoads; i++)
+            {
+                List<Vehicle.Vehicle> lV = [];
                 Road road = new(lV, string.Format("{0}", i));
                 ListRoads.Add(road);
             }
