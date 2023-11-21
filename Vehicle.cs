@@ -6,6 +6,7 @@ namespace Vehicle
     {
         public Road StartingPoint { get; set; } = startingPoint;
         public Road DestinationPoint { get; set; } = destinationPoint;
+        public Road CurrentPoint { get; set; } = startingPoint;
         public ListBrands Brand { get; set; } = brand;
         public ListVehicle TypeVehicle {get; set; } = typeVehicle;
         public string HonkSong { get; set; } = honkSong;
