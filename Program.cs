@@ -8,7 +8,7 @@ namespace Program
         {
             Intersection.Intersection myIntersection = new(4, 4);
             myIntersection.Generate();
-            myIntersection.ListRoads.ForEach(delegate(Road road){Console.WriteLine(road);});
+            Console.WriteLine(myIntersection);
         }
     }
 }
