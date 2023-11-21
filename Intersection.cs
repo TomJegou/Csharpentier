@@ -2,11 +2,18 @@ using Vehicle;
 
 namespace Intersection
 {
-    public class Intersection(int nbrRoads, int nbrCrossWalk): IIntersection
+    public class Intersection: IIntersection
     {
-        public int NbrRoads { get; set; } = nbrRoads;
-        public int NbrCrossWalk { get; set; } = nbrCrossWalk;
-        public List<Road> ListRoads { get; set; } = [];
+        public int NbrRoads { get; set; }
+        public int NbrCrossWalk { get; set; }
+        public List<Road> ListRoads { get; set; } = new();
+
+        public Intersection(int nbrRoads, int nbrCrossWalk)
+        {
+            NbrRoads = nbrRoads;
+            NbrCrossWalk= nbrCrossWalk;
+            Generate();
+        }
 
         public override string? ToString()
         {
@@ -42,7 +49,7 @@ namespace Intersection
         {
             for (int i  = 0; i < NbrRoads; i++)
             {
-                List<Vehicle.Vehicle> lV = [];
+                List<Vehicle.Vehicle> lV = new();
                 Road road = new(lV, string.Format("{0}", i));
                 ListRoads.Add(road);
             }
