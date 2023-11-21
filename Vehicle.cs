@@ -25,7 +25,7 @@ namespace Vehicle
 
         public void Go()
         {
-            Console.WriteLine("The Vehicle is goigng to the destination road");
+            Console.WriteLine(string.Format("The {0} is moving to road {1}\n", TypeVehicle, DestinationPoint.RoadName));
             CurrentPoint = DestinationPoint;
         }
 
@@ -41,7 +41,7 @@ namespace Vehicle
 
         public override string ToString()
         {
-            return string.Format("Vehicle :\n{0}\n{1}\n{2}\nStart at road {3}\nWants to go to road {4}\n", TypeVehicle, Brand, Speed, StartingPoint.RoadName, DestinationPoint.RoadName);
+            return string.Format("Vehicle :\n*  {0}\n*  {1}\n*  {2}\n*  Start at road {3}\n*  Wants to go to road {4}\n\n", TypeVehicle, Brand, Speed, StartingPoint.RoadName, DestinationPoint.RoadName);
         }
     }
 }
