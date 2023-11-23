@@ -14,8 +14,10 @@ namespace Program
                 {
                     foreach (Vehicle.Vehicle vehicle in road.ListVehicle)
                     {
+                        Console.WriteLine("Press any key to continue");
                         Console.ReadKey();
                         vehicle.Go();
+                        road.ListVehicle.Remove(vehicle);
                     }
                 }
             }
