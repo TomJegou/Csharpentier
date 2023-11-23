@@ -40,7 +40,12 @@ namespace Intersection
                 {
                     int sP = new Random().Next(0, ListRoads.Count);
                     int dP = new Random().Next(0, ListRoads.Count);
-                    ListRoads[i].ListVehicle.Add(new Vehicle.Vehicle(ListBrands.BMW, 300, "TUUT TUUT !", ListRoads[sP], ListRoads[dP], ListVehicle.Car));
+                    ListBrands[] brands = (ListBrands[])Enum.GetValues(typeof(ListBrands));
+                    ListBrands brand = brands[new Random().Next(brands.Length)];
+                    ListVehicle[] vehicles = (ListVehicle[])Enum.GetValues(typeof(ListVehicle));
+                    ListVehicle vehicle = vehicles[new Random().Next(vehicles.Length)];
+                    int[] listSpeed = IVehicle.GetSpeedList();
+                    ListRoads[i].ListVehicle.Add(new Vehicle.Vehicle(brand, listSpeed[new Random().Next(listSpeed.Length)], "TUUT TUUT !", ListRoads[sP], ListRoads[dP], vehicle));
                 }
             }
         }
