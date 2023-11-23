@@ -12,5 +12,10 @@ namespace Vehicle
         public void Go();
         public void Stop();
         public void Honk();
+        public static int[] GetSpeedList()
+        {
+            int[] result = {100, 150, 160, 180, 200, 300};
+            return result;
+        }
     }
 }
