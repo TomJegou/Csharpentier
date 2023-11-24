@@ -7,8 +7,8 @@ namespace Intersection
         public int NbrRoads { get; set; }
         public int NbrCrossWalk { get; set; }
         public List<Road> ListRoads { get; set; } = new();
-
-        public Intersection(int nbrRoads, int nbrCrossWalk)
+        public Boolean WithTrafficLight { get; set; }
+        public Intersection(int nbrRoads, int nbrCrossWalk,Boolean withTrafficLight)
         {
             NbrRoads = nbrRoads;
             NbrCrossWalk= nbrCrossWalk;
