@@ -9,11 +9,10 @@ namespace Intersection
 
         public TrafficLight.TrafficLight? TrafficLight;
 
-        public Road(List<Vehicle.Vehicle> listVehicle, string roadName, TrafficLight.TrafficLight? trafficLight = null)
+        public Road(List<Vehicle.Vehicle> listVehicle, string roadName)
         {
             RoadName = roadName;
             ListVehicle = listVehicle;
-            TrafficLight = trafficLight;
         }
 
         public override string ToString()
