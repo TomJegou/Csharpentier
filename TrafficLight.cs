@@ -6,7 +6,7 @@ namespace TrafficLight
         public int Duration { get; set; }
 
 
-        public TrafficLight(ListTrafficLight color, int duration)
+        public TrafficLight(ListTrafficLight color, int duration = 0)
         {
             Color = color;
             Duration = duration;
@@ -14,17 +14,17 @@ namespace TrafficLight
 
         public void ChangeColor()
         {
-            if (Color == ListTrafficLight.Red && Duration == 13)
+            if (Color == ListTrafficLight.Red && Duration == 10)
             {
                 Color = ListTrafficLight.Green;
                 Duration = 0;
             }
-            else if (Color == ListTrafficLight.Green && Duration == 7)
+            else if (Color == ListTrafficLight.Green && Duration == 13)
             {
                 Color = ListTrafficLight.Orange;
                 Duration = 0;
             }
-            else if (Color == ListTrafficLight.Orange && Duration == 10)
+            else if (Color == ListTrafficLight.Orange && Duration == 7)
             {
                 Color = ListTrafficLight.Red;
                 Duration = 0;
