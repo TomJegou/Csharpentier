@@ -1,4 +1,5 @@
 using Vehicle;
+using TrafficLight;
 
 namespace Intersection
 {
@@ -7,11 +8,12 @@ namespace Intersection
         public int NbrRoads { get; set; }
         public int NbrCrossWalk { get; set; }
         public List<Road> ListRoads { get; set; } = new();
-        public Boolean WithTrafficLight { get; set; }
-        public Intersection(int nbrRoads, int nbrCrossWalk,Boolean withTrafficLight)
+        public bool WithTrafficLight { get; set; }
+        public Intersection(int nbrRoads, int nbrCrossWalk, bool withTrafficLight)
         {
             NbrRoads = nbrRoads;
             NbrCrossWalk= nbrCrossWalk;
+            WithTrafficLight = withTrafficLight;
             Generate();
         }
 
@@ -56,6 +58,17 @@ namespace Intersection
             {
                 List<Vehicle.Vehicle> lV = new();
                 Road road = new(lV, string.Format("{0}", i));
+                if (WithTrafficLight)
+                {
+                    if (i%2 == 0)
+                    {
+                        road.TrafficLight = new(ListTrafficLight.Green);
+                    }
+                    else
+                    {
+                        road.TrafficLight = new(ListTrafficLight.Orange);
+                    }
+                }
                 ListRoads.Add(road);
             }
         }
