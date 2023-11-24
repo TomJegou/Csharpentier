@@ -1,3 +1,5 @@
+using TrafficLight;
+
 namespace Intersection
 {
     public class Road
@@ -5,10 +7,13 @@ namespace Intersection
         public string RoadName { get; set; }
         public List<Vehicle.Vehicle> ListVehicle;
 
-        public Road(List<Vehicle.Vehicle> listVehicle, string roadName)
+        public TrafficLight.TrafficLight? TrafficLight;
+
+        public Road(List<Vehicle.Vehicle> listVehicle, string roadName, TrafficLight.TrafficLight? trafficLight = null)
         {
             RoadName = roadName;
             ListVehicle = listVehicle;
+            TrafficLight = trafficLight;
         }
 
         public override string ToString()
