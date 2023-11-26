@@ -56,7 +56,8 @@ namespace Intersection
             for (int i  = 0; i < NbrRoads; i++)
             {
                 List<Vehicle.Vehicle> lV = new();
-                Road road = new(lV, string.Format("{0}", i));
+                List<NPC.Human> lH = new();
+                Road road = new(lV, lH,string.Format("{0}", i));
                 if (WithTrafficLight)
                 {
                     if (i%2 == 0)
@@ -66,6 +67,10 @@ namespace Intersection
                     else
                     {
                         road.TrafficLight = new(ListTrafficLight.Orange);
+                    }
+                    int nbrHuman = new Random().Next(0, 3);
+                    for (int j = 0; i <= nbrHuman; i++) {
+                        road.ListHuman.Add(new NPC.Human(new Random().Next(8, 100), new Random().Next(5, 10), string.Format("Human{0}", j)));
                     }
                 }
                 ListRoads.Add(road);
