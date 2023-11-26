@@ -5,7 +5,6 @@ namespace TrafficLight
         public ListTrafficLight Color { get; set; }
         public int Duration { get; set; }
 
-
         public TrafficLight(ListTrafficLight color, int duration = 0)
         {
             Color = color;
@@ -34,13 +33,9 @@ namespace TrafficLight
             }
         }
 
-
         public ListTrafficLight GetCurrentState()
         {
             return Color;
         }
-
-
-}
-
+    }
 }
