@@ -1,6 +1,6 @@
 namespace NPC
 {
-    public class NPC
+    public class NPC : INPC
     { 
         public int Age {get; set;}
         public int Vitesse {get; set;}
