@@ -5,12 +5,12 @@ namespace Intersection
         public string RoadName { get; set; }
         public List<Vehicle.Vehicle> ListVehicle;
         public TrafficLight.TrafficLight? TrafficLight;
-        public List<NPC.Humain> ListHuman;
-        public Road(List<Vehicle.Vehicle> listVehicle, List<NPC.Humain> listHumain,string roadName)
+        public List<NPC.Human> ListHuman;
+        public Road(List<Vehicle.Vehicle> listVehicle, List<NPC.Human> listHuman,string roadName)
         {
             RoadName = roadName;
             ListVehicle = listVehicle;
-            ListHuman = listHumain;
+            ListHuman = listHuman;
         }
 
         public override string ToString()
@@ -28,7 +28,7 @@ namespace Intersection
             }
             if (ListHuman.Count != 0)
             {
-                foreach(NPC.Humain human in ListHuman)
+                foreach(NPC.Human human in ListHuman)
                 {
                     result += human;
                 }
