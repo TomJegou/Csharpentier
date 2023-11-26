@@ -1,10 +1,10 @@
 namespace NPC
 {
-    public class Humain : NPC
+    public class Human : NPC
     {
         public bool AsCrossed { get; set; } = false;
         public string Name { get; set; }
-        public Humain(int age, int speed, string name) : base(age, speed)
+        public Human(int age, int speed, string name) : base(age, speed)
         {
             Age = age;
             Speed = speed;
@@ -13,7 +13,7 @@ namespace NPC
 
         public override string ToString()
         {
-            return string.Format("Humain:\n*   {0}\n*   {1}\n*   {2}\n", Age, Speed, Name);
+            return string.Format("Human:\n*   {0}\n*   {1}\n*   {2}\n", Age, Speed, Name);
         }
 
         public void CrossRoad()
