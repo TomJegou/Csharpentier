@@ -6,13 +6,12 @@ namespace Intersection
     public class Intersection: IIntersection
     {
         public int NbrRoads { get; set; }
-        public int NbrCrossWalk { get; set; }
+        public int NbrCrossWalkers { get; set; }
         public List<Road> ListRoads { get; set; } = new();
         public bool WithTrafficLight { get; set; }
-        public Intersection(int nbrRoads, int nbrCrossWalk, bool withTrafficLight)
+        public Intersection(int nbrRoads, bool withTrafficLight)
         {
             NbrRoads = nbrRoads;
-            NbrCrossWalk= nbrCrossWalk;
             WithTrafficLight = withTrafficLight;
             Generate();
         }
