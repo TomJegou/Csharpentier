@@ -14,6 +14,11 @@ namespace Program
                 int WithTr = new Random().Next(0, 100);
                 if (WithTr > 70) {
                     withTrafficLights = true;
+                    Console.WriteLine(string.Format("Generating intersection with traffic lights and {0} roads", nbrRoads));
+                }
+                else
+                {
+                    Console.WriteLine(string.Format("Generating intersection without traffic lights and {0} roads", nbrRoads));
                 }
                 Intersection.Intersection intersection = new(nbrRoads, withTrafficLights);
                 Console.WriteLine(intersection);
@@ -21,7 +26,7 @@ namespace Program
                 foreach (Road road in intersection.ListRoads)
                 {
                     // Loop through each car in road
-                    foreach (Vehicle.Vehicle vehicle in road.ListVehicle)
+                    while (road.ListVehicle.Count > 0)
                     {
                         bool canGo = true;
                         Console.WriteLine("Press any key to continue");
@@ -54,8 +59,8 @@ namespace Program
                         }
                         if (canGo)
                         {
-                            vehicle.Go();
-                            road.ListVehicle.Remove(vehicle);
+                            road.ListVehicle[0].Go();
+                            road.ListVehicle.Remove(road.ListVehicle[0]);
                         }
                     }
                 }
