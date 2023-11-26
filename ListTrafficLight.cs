@@ -1,6 +1,6 @@
 namespace TrafficLight
 {
-    public enum TrafficLight {
+    public enum ListTrafficLight {
         Red,
         Orange,
         Green,
