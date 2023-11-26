@@ -29,24 +29,36 @@ namespace Intersection
         public void Generate()
         {
             GenerateRoad();
-            GenerateVehiles();
+            GenerateVehicles();
         }
 
-        public void GenerateVehiles()
+        public void GenerateVehicles()
         {
-            for (int i  = 0; i < NbrRoads; i++)
+            Random random = new();
+            
+            for (int i = 0; i < NbrRoads; i++)
             {
-                int nbrV = new Random().Next(0, 3);
-                for (int j = 0; j < nbrV; j++)
+                int nbrVehicles = random.Next(0, 3);
+
+                for (int j = 0; j < nbrVehicles; j++)
                 {
-                    int sP = new Random().Next(0, ListRoads.Count);
-                    int dP = new Random().Next(0, ListRoads.Count);
-                    ListBrands[] brands = (ListBrands[])Enum.GetValues(typeof(ListBrands));
-                    ListBrands brand = brands[new Random().Next(brands.Length)];
-                    ListVehicle[] vehicles = (ListVehicle[])Enum.GetValues(typeof(ListVehicle));
-                    ListVehicle vehicle = vehicles[new Random().Next(vehicles.Length)];
-                    int[] listSpeed = IVehicle.GetSpeedList();
-                    ListRoads[i].ListVehicle.Add(new Vehicle.Vehicle(brand, listSpeed[new Random().Next(listSpeed.Length)], "TUUT TUUT !", ListRoads[sP], ListRoads[dP], vehicle));
+                    int startPointIndex = random.Next(0, ListRoads.Count);
+                    int destinationPointIndex = random.Next(0, ListRoads.Count);
+                    
+                    if (startPointIndex < ListRoads.Count && destinationPointIndex < ListRoads.Count)
+                    {
+                        ListBrands[] brands = (ListBrands[])Enum.GetValues(typeof(ListBrands));
+                        ListBrands brand = brands[random.Next(brands.Length)];
+                        
+                        ListVehicle[] vehicles = (ListVehicle[])Enum.GetValues(typeof(ListVehicle));
+                        ListVehicle vehicle = vehicles[random.Next(vehicles.Length)];
+                        
+                        int[] speedList = IVehicle.GetSpeedList();
+                        int speedIndex = random.Next(speedList.Length);
+                        int speed = speedList[speedIndex];
+                        
+                        ListRoads[i].ListVehicle.Add(new Vehicle.Vehicle(brand, speed, "TUUT TUUT !", ListRoads[startPointIndex], ListRoads[destinationPointIndex], vehicle));
+                    }
                 }
             }
         }
