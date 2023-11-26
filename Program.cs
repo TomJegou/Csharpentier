@@ -6,10 +6,12 @@ namespace Program
     {
         public static void Main()
         {
+            bool withTrafficLights = true;
             // Main loop
             while (true)
             {
-                Intersection.Intersection intersection = new(2, 0, true);
+                int nbrRoads = new Random().Next(2, 4);
+                Intersection.Intersection intersection = new(nbrRoads, withTrafficLights);
                 Console.WriteLine(intersection);
                 // Loop through each road
                 foreach (Road road in intersection.ListRoads)
