@@ -64,6 +64,7 @@ namespace Program
                                         canGo = true;
                                         break;
                                 }
+                                road.TrafficLight.ChangeColor();
                             }
                         }
 
