@@ -52,7 +52,7 @@ namespace Intersection
         {
             Random random = new();
 
-            for (int i = 0; i < NbrRoads; i++)
+            for (int i = 0; i < ListRoads.Count; i++)
             {
                 int nbrVehicles = random.Next(0, 3); // Random number of vehicles per road
 
